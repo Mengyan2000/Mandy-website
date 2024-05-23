@@ -1,0 +1,18 @@
+.row1 {
+    margin: inherit;
+    display: inline-flex;
+    /* align-items: center; */
+}
+
+.row2 {
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(238, 246, 181);
+}
+
+.intro_title {
+    margin: 120px;
+    font-size: 50px;
+    font-family: fantasy;
+    color: rgb(153, 204, 255);
+}
