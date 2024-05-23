@@ -3,6 +3,7 @@ import totoro from '../images/totoro.jpeg';
 import { Link } from '@mui/material';
 import { Col, Row, Container } from 'react-bootstrap';
 import './Introduction.css';
+import Weather from './weather';
 
 class Introduction extends React.PureComponent {
 
@@ -13,7 +14,9 @@ class Introduction extends React.PureComponent {
                 <div className="row1">
                     <img height={300} width={550} src={totoro} alt="Logo" />
                     <div className="intro_title">
-                        Welcome to Mandy Liu's Website!
+                        <Row>你好!</Row>
+                        <Row> Hallo, my name is </Row>
+                        <Row> 刘梦妍 (Lyu Mhong Yien) </Row>
                     </div>
                 </div>
                 
@@ -35,7 +38,7 @@ class Introduction extends React.PureComponent {
                                 href="https://www.google.com/maps/place/Guangdong+Province,+China/@22.7023333,108.1969345,6z/data=!3m1!4b1!4m6!3m5!1s0x315285f132af5c3f:0x2ed41c6f09259f29!8m2!3d23.1317099!4d113.26627!16zL20vMGg5dmg?entry=ttu" 
                                 target="_blank">
                                 GuangDong
-                            </a>. A wonder coastal province with bunch of fresh seafood. We even have our own dialog, Cantonese.
+                            </a>. A wonderful coastal province with tremendous amount of fresh seafood. We even have our own dialog, Cantonese.
                         </p>
                         <p style={{margin: "20px"}}>
                             I received a Bachelor's degree in Computer Engineering at 
@@ -44,6 +47,13 @@ class Introduction extends React.PureComponent {
                             who share the same interests with me. I also love to play badminton and do outdoor activities.
                             
                         </p>
+                        <p style={{margin: "20px"}}>
+                            To start off, I have a question for you below:
+                        </p>
+                        <p style={{margin: "20px"}}>
+                            Q: Where are you now?
+                        </p>
+                        <Weather />
                     </div>
                 </div>
                 

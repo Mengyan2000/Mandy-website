@@ -1,7 +1,9 @@
 .row1 {
     margin: inherit;
     display: inline-flex;
-    /* align-items: center; */
+    align-items: center;
+    justify-content: start;
+    width: 100%
 }
 
 .row2 {
@@ -11,8 +13,14 @@
 }
 
 .intro_title {
-    margin: 120px;
+    margin-left: 20vh;
+    margin-top: 50px;
     font-size: 50px;
     font-family: fantasy;
     color: rgb(153, 204, 255);
+}
+
+.weatherForm{
+    display: inline-flex;
+    margin-left: 40px;
 }

@@ -8,8 +8,18 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
 import { lightGreen } from '@mui/material/colors';
+import { pink } from '@mui/material/colors';
+import SvgIcon, { SvgIconProps } from '@mui/material/SvgIcon';
 
+function HomeIcon(props) {
+  return (
+    <SvgIcon {...props} strokeWidth={1.5}>
+      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+    </SvgIcon>
+  );
+}
 
 const pages = ['Introduction', 'My Background', 'My Gallery'];
 
@@ -42,12 +52,26 @@ class Header extends React.PureComponent {
                 <AppBar position="static">
                     <Toolbar variant="dense">
                         <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-                            <MenuIcon />
+                            <HomeIcon fontSize="large" color="success"/>
                         </IconButton>
+                        <Typography
+                            variant="h5"
+                            noWrap
+                            component="div"
+                            sx={{ display: { xs: 'none', sm: 'block' } }}
+                            margin="10px"
+                        >
+                            Mandy Liu
+                        </Typography>
+                        {/* <Box sx={{ flexGrow: 1 }} /> */}
                         {this.state.navLinks.map((page) => (
                             <MenuItem key={page} onClick={this.handleCloseNavMenu}>
-                                <Typography textAlign="center">
-                                    <a style={{color: 'white'}} key={page.title} href={page.path}>{page.title}</a> 
+                                <Typography 
+                                    textAlign="center" 
+                                    variant="button" 
+                                    margin="10px"
+                                >
+                                    <a ink style={{textDecoration: "none", color: 'white'}} key={page.title} href={page.path}>{page.title}</a > 
                                 </Typography>
                             </MenuItem>
                         ))}
